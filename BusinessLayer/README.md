@@ -1,0 +1,1 @@
+This repsitory contains code representing business layer of the application.

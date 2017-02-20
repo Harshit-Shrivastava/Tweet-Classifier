@@ -1,0 +1,1 @@
+This repository contains external libraries used the application.

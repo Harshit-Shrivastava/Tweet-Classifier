@@ -1,0 +1,1 @@
+This repository contains the test cases to test the functionality of the application.

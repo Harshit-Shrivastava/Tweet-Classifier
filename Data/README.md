@@ -1,0 +1,1 @@
+This repository contains the data for the application. The sub-repository 'test' contains data to test the model and 'train' contains data to train the model.

@@ -1,0 +1,1 @@
+This repository contains the web logic for the application.
