@@ -14,12 +14,6 @@ connection with important world events, location, time of the day, etc.
 
 ####Data
 
-##Developers
-<ul>
-<li>Harshit Shrivastava (harshit.shrivastava14@gmail.com) </li>
-<li>Harsha Phulwani (harshaphulwani16@gmail.com) </li>
-<li>Mitali Paygude (mitalipaygude@gmail.com) </li>
-</ul>
 ##License
 The MIT License (MIT)
 
