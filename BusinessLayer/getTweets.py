@@ -14,7 +14,13 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify= True)
 #input: user handle
 #returns: list object containing tweets
 def userTweets(user):
-    return []
+    tweetStore = []
+    TwitterUser = api.get_user(user)
+    tweets = TwitterUser.timeline()
+    for t in tweets:
+        tweetStore.append(t.text)
+    print tweetStore
+    return tweetStore
 
 #function to get tweets containing a hashtag
 #input: hashtag
@@ -29,14 +35,14 @@ def keywordTweets(keyword):
     return []
 
 #function to create folders for a topic for test and train data
-#input: topic
+#input: none
 #returns: none
-def createFolders(topic):
+def createFolders():
     os.chdir('../Data/Topics')
     for file in glob.glob('*.txt'):
         folderName = os.path.splitext(file)[0]
-        trainFolder = os.path.join('../Data/train', folderName)
-        testFolder = os.path.join('../Data/test', folderName)
+        trainFolder = os.path.join('../train', folderName)
+        testFolder = os.path.join('../test', folderName)
         if not os.path.exists(trainFolder):
             os.makedirs(trainFolder)
         if not os.path.exists(testFolder):
@@ -44,33 +50,33 @@ def createFolders(topic):
     return
 
 def readTopic(file):
-    directory = '../Data/train'
-    with open(directory + file + 'r') as f:
+    directory = 'C:/SP17/SMM/Project/Data/Topics/'
+    with open(directory + file, 'r') as f:
         lines = f.readlines()
         for line in lines:
             if line.startswith('@'):
                 #line represents a user, pass to the function userTweets, and then to createTweetData
-                createTweetData(userTweets(line[1:], file))
+                createTweetData(userTweets(line[1:]), file)
             elif line.startswith('#'):
                 #line represents a hashtag, pass to the function hashTagTweets, and then to createTweetData
-                createTweetData(hashtagTweets((line[1:], file)))
+                createTweetData(hashtagTweets(line[1:]), file)
             else:
                 if line.startswith('@'):
                 # line represents a user, pass to the function userTweets, and then to createTweetData
-                    createTweetData(keywordTweets((line), file))
+                    createTweetData(keywordTweets(line), file)
     return
 
 #function to create individual file for each tweet
 #input: list of tweets for a topic, topic
 #returns: none
-def createTweetData(tweetList):
+def createTweetData(tweetList, file):
     return
 
 #function to parse over the topics
 #input: path to the topics folder
 #returns: none
 def readAllTopics(topicsFolder):
-    os.chdir('../Data/Topics')
+    os.chdir('C:/SP17/SMM/Project/Data/Topics')
     for file in glob.glob('*.txt'):
         readTopic(file)
     return
@@ -89,7 +95,10 @@ def readAllTopics(topicsFolder):
 #function to pull tweets for a topic for both test and train
 #input: topic
 #returns: none
-def pullTweets(topic):
-    createFolders(topic)
+def pullTweets():
+    createFolders()
     readAllTopics('../Data/Topics')
     return
+
+if __name__ == "__main__":
+    pullTweets()
