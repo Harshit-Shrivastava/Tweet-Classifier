@@ -15,18 +15,22 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify= True)
 #returns: list object containing tweets
 def userTweets(user):
     tweetStore = []
-    TwitterUser = api.get_user(user)
-    tweets = TwitterUser.timeline()
-    for t in tweets:
-        tweetStore.append(t.text)
-    print tweetStore
+    c = tweepy.Cursor(api.user_timeline, id=user)
+    for status in c.items(500):
+        tweetStore.append(status.text)
+    #print tweetStore
     return tweetStore
 
 #function to get tweets containing a hashtag
 #input: hashtag
 #returns: list object containing tweets
 def hashtagTweets(hashtag):
-    return []
+    tweetStore = []
+    c = tweepy.Cursor(api.search, q=hashtag, lang="en")
+    for status in c.items(500):
+        tweetStore.append(status.text)
+    print tweetStore
+    return tweetStore
 
 #function to get tweets containing a keyword
 #input: keyword

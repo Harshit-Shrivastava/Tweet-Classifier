@@ -6,6 +6,7 @@ various topics or categories such as politics, arts, science, war, sports, etc. 
 connection with important world events, location, time of the day, etc.
 
 ##Components
+
 ####Frontend
 
 ####Backend
