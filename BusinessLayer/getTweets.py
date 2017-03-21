@@ -22,14 +22,12 @@ def userTweets(user):
     c = tweepy.Cursor(api.user_timeline, id=user)
     for status in c.items(500):
         tweetStore.append(status.text)
-    #print tweetStore
     return tweetStore
 
 #function to get tweets containing a hashtag
 #input: hashtag
 #returns: list object containing tweets
 def hashtagTweets(hashtag):
-    print hashtag
     tweetStore = []
     c = tweepy.Cursor(api.search, q=hashtag, lang="en")
     for status in c.items(500):
@@ -40,7 +38,6 @@ def hashtagTweets(hashtag):
 #input: keyword
 #returns: list object containing tweets
 def keywordTweets(keyword):
-    print keyword
     tweetStore = []
     c = tweepy.Cursor(api.search, q=keyword, lang="en")
     for status in c.items(500):
@@ -126,6 +123,7 @@ def readAllTopics(topicsFolder):
 def pullTweets():
     createFolders()
     readAllTopics('../Data/Topics')
+    print 'Populating tweets, please wait...'
     return
 
 if __name__ == "__main__":
