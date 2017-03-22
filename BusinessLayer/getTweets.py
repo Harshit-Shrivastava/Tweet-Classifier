@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+from os.path import basename
 import tweepy
 import os
 import glob
@@ -6,11 +7,14 @@ import random
 import string
 import shutil
 
+#parent directory for the codebase
+parentDir = os.path.dirname(os.getcwd())
+
 #credentials for the app
 API_KEY = "kjhjED58EIPLCB0jTJr9KUCjW"
 API_SECRET = "rpg8LzlXjG27FvfdGnuNi1vjNWWsZzsV5SVHf4nKXIvtZ58nfK"
 
-#set basic authentication
+#set basic authentication and create API object
 auth = tweepy.AppAuthHandler(API_KEY, API_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify= True)
 
@@ -48,22 +52,25 @@ def keywordTweets(keyword):
 #input: none
 #returns: none
 def createFolders():
-    os.chdir('../Data/Topics')
+    path = os.path.join(parentDir, 'Data\\Topics')
+    os.chdir(path)
     for file in glob.glob('*.txt'):
         folderName = os.path.splitext(file)[0]
-        trainFolder = os.path.join('../train', folderName)
-        testFolder = os.path.join('../test', folderName)
+        trainFolder = os.path.join(os.path.join(parentDir, 'Data\\train'), folderName)
+        testFolder = os.path.join(os.path.join(parentDir, 'Data\\test'), folderName)
         if not os.path.exists(trainFolder):
             os.makedirs(trainFolder)
         if not os.path.exists(testFolder):
             os.makedirs(testFolder)
     return
 
+#function to read text files named with topics and redirect to respective functions
+#input: file
+#returns: none
 def readTopic(file):
-    directory = 'C:/SP17/SMM/Project/Data/Topics/'
-    with open(directory + file, 'r') as f:
-        directory = 'C:/SP17/SMM/Project/Data/train/'
-        tweetDir = directory + os.path.splitext(file)[0]
+    with open(file, 'r') as f:
+        directory = os.path.join(parentDir, 'Data\\train\\')
+        tweetDir = os.path.join(directory, os.path.splitext(file)[0])
         clearRepository(tweetDir)
         lines = f.readlines()
         for line in lines:
@@ -99,10 +106,10 @@ def clearRepository(repository):
 #input: list of tweets for a topic, topic
 #returns: none
 def createTweetData(tweetList, file):
-    directory = 'C:/SP17/SMM/Project/Data/train/'
-    tweetDir = directory + os.path.splitext(file)[0]
+    topic = os.path.splitext(basename(file))[0]
+    tweetDir = os.path.join(os.path.join(parentDir, 'Data\\train'), topic)
     for tweet in tweetList:
-        tweetFile = tweetDir + '/' + randomWord(10)
+        tweetFile = os.path.join(tweetDir, randomWord(10))
         f = open(tweetFile + '.txt','w+')
         f.write(tweet.encode('utf-8'))
         f.close()
@@ -112,8 +119,8 @@ def createTweetData(tweetList, file):
 #input: path to the topics folder
 #returns: none
 def readAllTopics(topicsFolder):
-    os.chdir('C:/SP17/SMM/Project/Data/Topics')
-    for file in glob.glob('*.txt'):
+    os.chdir(os.path.join(parentDir, 'Data\\Topics\\'))
+    for file in glob.glob(os.path.join(os.getcwd(),'*.txt')):
         readTopic(file)
     return
 
@@ -121,9 +128,9 @@ def readAllTopics(topicsFolder):
 #input: topic
 #returns: none
 def pullTweets():
-    createFolders()
-    readAllTopics('../Data/Topics')
     print 'Populating tweets, please wait...'
+    createFolders()
+    readAllTopics( os.path.join (parentDir, 'Data\\Topics'))
     return
 
 if __name__ == "__main__":
