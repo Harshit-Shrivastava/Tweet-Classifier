@@ -1,21 +1,21 @@
 # Topic-Classification-for-Feeds-on-Twitter
 
-##Idea
+## Idea
 Application to investigate tweets over a period of time to infer interesting patterns in order to classify another set of tweets into 
 various topics or categories such as politics, arts, science, war, sports, etc. and infer more patterns from this classification, such as 
 connection with important world events, location, time of the day, etc.
 
-##Components
+## Components
 
-####Frontend
+#### Frontend
 
-####Backend
+#### Backend
 
-####Algorithms
+#### Algorithms
 
-####Data
+#### Data
 
-##License
+## License
 The MIT License (MIT)
 
 Copyright (c) 2017, the developers
