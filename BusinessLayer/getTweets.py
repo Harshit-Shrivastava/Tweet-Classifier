@@ -133,5 +133,8 @@ def pullTweets():
     readAllTopics( os.path.join (parentDir, 'Data\\Topics'))
     return
 
+def flaskPOC():
+    return "Hello Harshit!"
+
 if __name__ == "__main__":
     pullTweets()
