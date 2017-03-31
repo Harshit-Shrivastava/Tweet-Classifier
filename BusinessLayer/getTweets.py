@@ -8,7 +8,7 @@ import string
 import shutil
 
 #parent directory for the codebase
-parentDir = os.path.dirname(os.getcwd())
+parentDir = os.path.dirname(os.path.dirname(os.getcwd()))
 
 #credentials for the app
 API_KEY = "kjhjED58EIPLCB0jTJr9KUCjW"

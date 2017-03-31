@@ -71,9 +71,29 @@
 		</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+	<div class="container">
+		<button class="btn btn-primary" id="getData">Create Training Data</button>
+		<br/>
+		<br/>
+		<div id="progress">Click on the button above to create training dataset</div>
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ url_for('static',filename = 'scripts/bootstrap.min.js') }}"></script>
+  	<script type="text/javascript">
+		$("#getData").click(function(){
+		   $.ajax({
+    			url: '/pullTweets',
+    			cache: false,
+    			beforeSend: function(){
+        			$('#progress').text('Populating tweets, please wait...');
+				},
+    			success: function(result){
+       				$('#progress').text(result);
+    			}
+			});
+		});
+	</script>
   </body>
 </html>
