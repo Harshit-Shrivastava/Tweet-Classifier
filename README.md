@@ -8,23 +8,23 @@ connection with important world events, location, time of the day, etc.
 ## Components
 
 #### Frontend
-Flask
-HTML5
-CSS3
-Bootstrap
+* Flask
+* HTML5
+* CSS3
+* Bootstrap
 
 #### Backend
-Python
+* Python
 
 #### Algorithms
-Multinomial Naive Bayes Classification
+* Multinomial Naive Bayes Classification
 
 #### Data
-Tweepy
+* Tweepy
 
 #### APIs
-Python user_timeline APIs
-Python Search API
+* Python user_timeline APIs
+* Python Search API
 
 ## License
 The MIT License (MIT)
