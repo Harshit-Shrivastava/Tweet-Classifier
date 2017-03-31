@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afa0cd35-b21c-4bcf-9109-e0d8de9f7d09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BusinessLayer/getTweets.py" afterPath="$PROJECT_DIR$/BusinessLayer/getTweets.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/index.py" afterPath="$PROJECT_DIR$/Web/index.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/templates/index.html" afterPath="$PROJECT_DIR$/Web/templates/index.html" />
-    </list>
+    <list default="true" id="afa0cd35-b21c-4bcf-9109-e0d8de9f7d09" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +71,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+            <state relative-caret-position="839">
+              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -976,8 +972,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+        <state relative-caret-position="839">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding />
         </state>
       </provider>
