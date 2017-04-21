@@ -1,0 +1,9 @@
+@NYtimes
+@BBCBreaking
+@CNN
+@BBCWorld
+@Reuters
+@ReutersUS
+@CBSNews
+@whitehouse
+@foxnews

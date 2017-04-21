@@ -3,3 +3,8 @@
 @ReutersPolitics
 #Election2016
 politics
+@politico
+@nprpolitics
+@McClatchyDC
+@SwingState
+@GOP12
