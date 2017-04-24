@@ -1,0 +1,1 @@
+RT @listonb: Resize images on the fly with a lazy load approach on #AWS #Lambda, #S3 and #APIGateway on @awscloud https://t.co/LE7tthoKBE

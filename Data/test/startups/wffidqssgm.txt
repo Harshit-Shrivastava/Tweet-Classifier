@@ -1,0 +1,1 @@
+RT @AWSSecurityInfo: s2n is now handling 100 percent of SSL traffic for Amazon S3! https://t.co/CWI8N8Hf5y https://t.co/CWGM2Z5oFi

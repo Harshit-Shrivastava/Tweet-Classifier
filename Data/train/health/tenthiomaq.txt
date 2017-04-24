@@ -1,0 +1,1 @@
+@hmkyale is protocol registration worth it? Afraid reproducibility testing focus only on interesting findings. Repro of negs may not happen

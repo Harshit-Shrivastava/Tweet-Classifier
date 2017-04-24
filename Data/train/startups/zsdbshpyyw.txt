@@ -1,0 +1,1 @@
+RT @adhorn: Great post that covers important considerations &amp; strategies for choosing the right partition key to DynamoDB https://t.co/fRl2…

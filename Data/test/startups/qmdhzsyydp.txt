@@ -1,0 +1,1 @@
+RT @awscloud: This is My Architecture: Steve Hunt of FanDuel shows how they run Cloudformation at scale with Aurora! See our site: https://…

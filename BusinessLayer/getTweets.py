@@ -6,10 +6,13 @@ import glob
 import random
 import string
 import shutil
+import math
 
 #parent directory for the codebase
 parentDir = os.path.dirname(os.path.dirname(os.getcwd()))
-
+#For some reason i've to this..check this
+parentDir = os.path.join(parentDir, 'Tweet-Classifier')
+print(parentDir)
 #credentials for the app
 API_KEY = "kjhjED58EIPLCB0jTJr9KUCjW"
 API_SECRET = "rpg8LzlXjG27FvfdGnuNi1vjNWWsZzsV5SVHf4nKXIvtZ58nfK"
@@ -70,8 +73,11 @@ def createFolders():
 def readTopic(file):
     with open(file, 'r') as f:
         directory = os.path.join(parentDir, 'Data\\train\\')
+        directory_test = os.path.join(parentDir, 'Data\\test\\')
         tweetDir = os.path.join(directory, os.path.splitext(file)[0])
-        clearRepository(tweetDir)
+        tweetDir_test = os.path.join(directory_test, os.path.splitext(file)[0])
+        #clearRepository(tweetDir)
+        #clearRepository(tweetDir_test)
         lines = f.readlines()
         for line in lines:
             if line.startswith('@'):
@@ -107,8 +113,14 @@ def clearRepository(repository):
 #returns: none
 def createTweetData(tweetList, file):
     topic = os.path.splitext(basename(file))[0]
-    tweetDir = os.path.join(os.path.join(parentDir, 'Data\\train'), topic)
+
+    counter=1
     for tweet in tweetList:
+        counter=counter+1
+        if(counter%4==0):
+            tweetDir = os.path.join(os.path.join(parentDir, 'Data\\test'), topic)
+        else:
+            tweetDir = os.path.join(os.path.join(parentDir, 'Data\\train'), topic)
         tweetFile = os.path.join(tweetDir, randomWord(10))
         f = open(tweetFile + '.txt','w+')
         f.write(tweet.encode('utf-8'))
@@ -133,8 +145,7 @@ def pullTweets():
     readAllTopics( os.path.join (parentDir, 'Data\\Topics'))
     return
 
-def flaskPOC():
-    return "Hello Harshit!"
+
 
 if __name__ == "__main__":
     pullTweets()

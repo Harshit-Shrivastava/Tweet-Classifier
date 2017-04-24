@@ -1,0 +1,1 @@
+RT @jeffbarr: Way cool - Doorbell with Facial Recognition - Raspberry Pi, #AWS (Lambda, SNS, DynamoDB, Rekognition, Polly) - https://t.co/B…

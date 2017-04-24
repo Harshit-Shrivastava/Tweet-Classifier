@@ -1,0 +1,1 @@
+RT @awscloud: Which is your favorite version of Windows to run in EC2?

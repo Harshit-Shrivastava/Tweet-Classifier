@@ -1,0 +1,1 @@
+RT @Werner: "Secure Amazon EMR with Encryption" - how security configurations make it easy to manage keys and certificates https://t.co/PEr…

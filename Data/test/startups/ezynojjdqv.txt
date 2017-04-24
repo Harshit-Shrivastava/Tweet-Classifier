@@ -1,0 +1,1 @@
+CoreOS (YC S13) extends its Tectonic Kubernetes service to Azure and OpenStack https://t.co/rXibsJz5jU

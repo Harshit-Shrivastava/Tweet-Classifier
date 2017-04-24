@@ -1,0 +1,1 @@
+@ePatientDave makes old err: results of 1 trial can’t yield reccs. Should be based on body of evidence and patient context.

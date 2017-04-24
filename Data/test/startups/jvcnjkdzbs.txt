@@ -1,0 +1,1 @@
+RT @awscloud: New on the AWS #BigData Blog, "Using SaltStack to Run Commands in Parallel on Amazon EMR" https://t.co/l9Oi1Y8ufr https://t.c…

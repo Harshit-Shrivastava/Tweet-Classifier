@@ -1,0 +1,1 @@
+Does anyone know how Giphy implements their triangle show/hide functionality inside Slack messages?

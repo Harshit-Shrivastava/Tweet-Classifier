@@ -1,0 +1,1 @@
+Temperatures today : Delhi 33 degrees London 32,Hongkong  35,Paris 38,Dubai 39 !!

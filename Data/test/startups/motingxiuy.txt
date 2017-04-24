@@ -1,0 +1,1 @@
+RT @awscloud: Learn how to fanout S3 event notifications to multiple endpoints with Amazon SNS pub/sub messaging: https://t.co/GXypgEK5KZ h…

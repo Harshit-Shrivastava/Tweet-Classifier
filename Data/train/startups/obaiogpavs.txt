@@ -1,0 +1,1 @@
+RT @listonb: Learn how to do #Kinesis #Firehose Data transformation using #AWS #Lambda on @awscloud https://t.co/c1uN9NvXUl

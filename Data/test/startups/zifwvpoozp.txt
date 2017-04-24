@@ -1,0 +1,1 @@
+RT @awscloud: Check out this 7-minute video on how to run concurrent jobs in an EMR cluster using AWS Data Pipeline! https://t.co/MJEdHQPkd…

@@ -1,0 +1,1 @@
+In case you missed it, check out the #blog post "#Serverless Architectures w/ Java 8, #AWSLambda, &amp; Amazon DynamoDB… https://t.co/twS65ceUAf

@@ -1,0 +1,11 @@
+#IPL  Points Table:
+T-M- W-L-P
+MI 7 6 1 12
+KKR 6 4 2 8
+SRH 7 4 3 8
+RPS 6 3 3 6
+DD 6 2 4 4
+KXIP 6 2 4 4
+RCB 6 2 4 4
+GL 6 2 4 4.
+#F Tdy1st.
