@@ -20,7 +20,11 @@ connection with important world events, location, time of the day, etc.
 * Multinomial Naive Bayes Classification
 
 #### Data
-* Tweepy
+* tweepy
+* numpy
+* sklearn
+* pandas
+* scipy
 
 #### APIs
 * Python user_timeline APIs
